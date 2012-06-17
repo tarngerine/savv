@@ -13,6 +13,8 @@
 
     font-size: 14px;
     text-align: center;
+
+    overflow:hidden;
   }
 
   ::selection {
@@ -49,8 +51,8 @@
     top: 50%;
     left: 50%;
 
-    margin-left: -206px;
-    margin-top: 4px;
+    margin-left: -210px;
+    margin-top: -20px;
 
     width: 420px;
     height: 40px;
@@ -63,15 +65,58 @@
     line-height: 40px;
   }
 
+  #bank{
+
+    position:fixed;
+
+    top:auto;
+    bottom:0;
+
+    margin-left:-150px;
+
+    width:300px;
+    height:100px;
+    border-top:#2f282c 10px solid;
+
+    background: #33cc66;
+
+  }
+
   </style>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+  <script type="text/javascript">
+
+  $( function() {
+
+    function doAnimation(){
+    //$('#dollar').animate({top: '70%'}, {duration: 1000, easing: easeOutBack});
+
+
+      $('#dollar').css("top", "-360px").animate({top: '50%'}, 1000).delay(1300).animate({top: '150%'}, 1000).delay(500).animate({top: '-360px'}, 0, doAnimation);
+
+    }
+
+    //call first iteration
+    doAnimation();
+  }
+
+    );
+
+  </script>
+
 
 </head>
 <body>
-  <div class="money">
+  <div class="money" id="dollar">
     &#36;
-    <div class="saved">
-      Save yourself.
-    </div>
+  </div>
+  <div class="saved">
+    Save yourself.
+  </div>
+  <div class="saved" id="bank">
+    &nbsp;
   </div>
 
 </body>
