@@ -82,6 +82,45 @@
 
   }
 
+
+  @-webkit-keyframes bankit {
+    0% {
+      top: -50%;
+    }
+
+    30%{
+      top: 50%;
+    }
+
+    60%{
+      top: 50%;
+    }
+
+    100%{
+      top:150%;
+    }
+
+  }
+
+  #dollar.animate{
+    -webkit-animation:bankit 3s infinite;
+  }
+
+  @-webkit-keyframes baconin {
+    0% {
+      top: -50%;
+    }
+
+    100%{
+      top:50%;
+    }
+
+  }
+
+  #dollar.animatein{
+    -webkit-animation-name:baconin;
+    -webkit-animation-duration:1s;
+  }
   </style>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -93,8 +132,14 @@
     function doAnimation(){
     //$('#dollar').animate({top: '70%'}, {duration: 1000, easing: easeOutBack});
 
+    $('#dollar').toggleClass("animate");
 
-      $('#dollar').css("top", "-360px").animate({top: '50%'}, 1000).delay(1300).animate({top: '150%'}, 1000).delay(500).animate({top: '-360px'}, 0, doAnimation);
+   /* $('#dollar').removeClass("animateout").addClass("animatein").delay(3000).queue(
+        function(){
+          $('#dollar').removeClass("animatein").addClass("animateout");
+          $('#dollar').dequeue();
+        });*/
+    //  $('#dollar').css("top", "-360px").animate({top: '50%'}, 1000).delay(1300).animate({top: '150%'}, 1000).delay(500).animate({top: '-360px'}, 0, doAnimation);
 
     }
 
