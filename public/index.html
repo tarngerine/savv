@@ -114,28 +114,53 @@
     100%{
       top:150%;
     }
-
   }
 
-  #dollar.animate{
-    -webkit-animation:bankit 3s infinite cubic-bezier(0.675, -0.325, 0.270, 1.335);
-  }
-
-  @-webkit-keyframes baconin {
+  @-moz-keyframes bankit {
     0% {
       top: -50%;
     }
 
+    20%{
+      top: 50%;
+    }
+
+    60%{
+      top: 50%;
+    }
+
     100%{
-      top:50%;
+      top:150%;
+    }
+  }
+
+  @keyframes bankit {
+    0% {
+      top: -50%;
+    }
+
+    20%{
+      top: 50%;
+    }
+
+    60%{
+      top: 50%;
+    }
+
+    100%{
+      top:150%;
     }
 
   }
 
-  #dollar.animatein{
-    -webkit-animation-name:baconin;
-    -webkit-animation-duration:1s;
+  #dollar.animate{
+    -webkit-animation: bankit 3s infinite;
+    -moz-animation: bankit 3s cubic-bezier(0.675, -0.325, 0.270, 1.335) infinite;
+    animation: bankit 3s cubic-bezier(0.675, -0.325, 0.270, 1.335) infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.675, 0, 0.270, 1); /* older webkit */
+    -webkit-animation-timing-function: cubic-bezier(0.675, -0.325, 0.270, 1.335); 
   }
+
   </style>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -154,6 +179,7 @@
           $('#dollar').removeClass("animatein").addClass("animateout");
           $('#dollar').dequeue();
         });*/
+
     //  $('#dollar').css("top", "-360px").animate({top: '50%'}, 1000).delay(1300).animate({top: '150%'}, 1000).delay(500).animate({top: '-360px'}, 0, doAnimation);
 
     }
