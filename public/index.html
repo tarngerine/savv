@@ -76,10 +76,25 @@
 
     width:300px;
     height:100px;
-    border-top:#2f282c 10px solid;
+    border-top:#2f282c 7px solid;
 
-    background: #33cc66;
+    background: #d8c0cf;
 
+  }
+
+  #bank.back{
+    height:105px;
+  }
+
+  #piggy{
+    position:fixed;
+
+    bottom:0;
+
+    width:100%;
+    height:130px;
+
+    background:#d8c0cf;
   }
 
 
@@ -88,7 +103,7 @@
       top: -50%;
     }
 
-    30%{
+    20%{
       top: 50%;
     }
 
@@ -103,7 +118,7 @@
   }
 
   #dollar.animate{
-    -webkit-animation:bankit 3s infinite;
+    -webkit-animation:bankit 3s infinite cubic-bezier(0.675, -0.325, 0.270, 1.335);
   }
 
   @-webkit-keyframes baconin {
@@ -154,6 +169,12 @@
 
 </head>
 <body>
+  <div id="piggy">
+    &nbsp;
+  </div>
+  <div class="saved back" id="bank">
+    &nbsp;
+  </div>
   <div class="money" id="dollar">
     &#36;
   </div>
@@ -163,6 +184,7 @@
   <div class="saved" id="bank">
     &nbsp;
   </div>
+
 
 </body>
 </html>
