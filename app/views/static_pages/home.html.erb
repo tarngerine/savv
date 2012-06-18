@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save yourself.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=.7, maximum-scale=.7"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <%= stylesheet_link_tag    "static_pages", media: "all" %>
+  <%= javascript_include_tag "static_pages" %>
+
+  <script type="text/javascript">
+    $(function() {
+      $('#dollar').toggleClass("animate");
+    });
+  </script>
+
+</head>
+<body>
+  <div id="piggy">
+    &nbsp;
+  </div>
+  <div class="saved back" id="bank">
+    &nbsp;
+  </div>
+  <div class="money" id="dollar">
+    &#36;
+  </div>
+  <div class="saved">
+    Save yourself.
+  </div>
+  <div class="saved" id="bank">
+    &nbsp;
+  </div>
+
+
+</body>
+</html>

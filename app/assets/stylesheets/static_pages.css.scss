@@ -1,0 +1,159 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$backgroundColor: #33cc66;
+$darkGrey: #2f282c;
+$piggyColor: #dda6c9;
+$selectionColor: #d5aac2;
+
+body {
+	background: $backgroundColor;
+	margin:0;
+	padding:0;
+
+	font-size: 14px;
+	text-align: center;
+
+	overflow:hidden;
+}
+
+::selection {
+	background: $selectionColor; /* Safari */
+}
+
+::-moz-selection {
+	background: $selectionColor; /* Firefox */
+}
+
+
+.money {
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+
+	margin-left: -213px;
+	margin-top: -203px;
+
+	width: 420px;
+	height: 360px;
+
+	font-family: "Georgia", serif;
+	font-size: 32em;
+	line-height: 360px;
+	color: white;
+}
+
+.saved {
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+
+	margin-left: -210px;
+	margin-top: -20px;
+
+	width: 420px;
+	height: 40px;
+
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 54px;
+	font-weight: bold;
+	line-height: 40px;
+	color: $darkGrey;
+}
+
+#bank{
+	position:fixed;
+
+	top:auto;
+	bottom:0;
+
+	margin-left:-180px;
+
+	width:360px;
+	height:100px;
+	border-top: $darkGrey 7px solid;
+
+	background: $piggyColor;
+}
+
+#bank.back{
+	height:105px;
+}
+
+#piggy{
+	position:fixed;
+
+	bottom:0;
+
+	width:100%;
+	height:130px;
+
+	background:$piggyColor;
+}
+
+
+@-webkit-keyframes bankit {
+	0% {
+	  top: -50%;
+	}
+
+	20%{
+	  top: 50%;
+	}
+
+	60%{
+	  top: 50%;
+	}
+
+	100%{
+	  top:150%;
+	}
+}
+
+@-moz-keyframes bankit {
+	0% {
+	  top: -50%;
+	}
+
+	20%{
+	  top: 50%;
+	}
+
+	60%{
+	  top: 50%;
+	}
+
+	100%{
+	  top:150%;
+}
+}
+
+@keyframes bankit {
+	0% {
+	  top: -50%;
+	}
+
+	20%{
+	  top: 50%;
+	}
+
+	60%{
+	  top: 50%;
+	}
+
+	100%{
+	  top:150%;
+	}
+
+}
+
+#dollar.animate{
+	-webkit-animation: bankit 3s infinite;
+	-moz-animation: bankit 3s cubic-bezier(0.675, -0.325, 0.270, 1.335) infinite;
+	animation: bankit 3s cubic-bezier(0.675, -0.325, 0.270, 1.335) infinite;
+	-webkit-animation-timing-function: cubic-bezier(0.675, 0, 0.270, 1); /* older webkit */
+	-webkit-animation-timing-function: cubic-bezier(0.675, -0.325, 0.270, 1.335); 
+}
